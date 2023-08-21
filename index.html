@@ -5,6 +5,7 @@
 <meta property="og:url" content="https://auitent.com" />
 <meta property="og:description" content="Our official WWW" />
 <meta name="theme-color" content="#FFFFFF">
+<div id="page0">
 <div id="auitent">
   <h1 id="auitenttitle">auitent</h1>
   <h2><span class="space">for <a href="#entertainment" class="link">entertainment.</a></span> <span class="space">for <a href="#brands" class="link">brands.</a></span> <span class="space">for <a href="#creations" class="link">creations.</a></span></h2>
@@ -35,7 +36,7 @@
 </div><!--
 --><div id="creations">
   <h3 id="creationstitle">creations.</h3>
-  <span class="item" style="background: white; color: black;">
+  <span class="item" style="background: white; color: black;" onclick="useParameter(1)">
     Randomgear
   </span>
   <span class="item" style="background: white; color: black;">
@@ -44,6 +45,13 @@
   <span class="item" style="background: white; color: black;">
     ???
   </span>
+</div>
+</div>
+<div id="page1" class="fullscreen" style="display: none;">
+  <h1>randomgear anytime soon???</h1>
+  <h2>yesn't</h2>
+  <h3>(idrk)</h3>
+  <h4>djm</h4>
 </div>
 <p class="note">Owner 🏹 5rcher, Developed by 💻 KrajeQ, auitent.com domain</p>
 <style>
@@ -59,6 +67,10 @@ body::-webkit-scrollbar {
 body::-webkit-scrollbar-thumb {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: black;
+}
+.fullscreen {
+  width: 100vw;
+  height: 100vh;
 }
 @media (orientation=landscape) {
   html {
@@ -294,3 +306,24 @@ body::-webkit-scrollbar-thumb {
   }
 }
 </style>
+  <script>
+function useParameter(number) {
+    document.getElementById("page0").style.display = "none";
+    document.getElementById("page" + number).style.display = "block";
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}
+
+const currentUrl = window.location.href;
+const urlSearchParams = new URLSearchParams(new URL(currentUrl).search);
+
+if (urlSearchParams.has('p')) {
+    const paramValue = urlSearchParams.get('p');
+    if (!isNaN(paramValue)) {
+        useParameter(Number(paramValue));
+    } else {
+        console.log('The parameter is not a number.');
+    }
+} else {
+    console.log('Showing page 0');
+}
+</script>
