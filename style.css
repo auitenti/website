@@ -65,7 +65,7 @@ body::-webkit-scrollbar-thumb {
     display: inline-grid;
     justify-content: center;
     align-items: center;
-    font-size: 2vw;
+    font-size: 1.5vw;
     border-radius: 5vw;
     padding: 2vw;
     margin: 2vw;
