@@ -70,7 +70,7 @@ body::-webkit-scrollbar-thumb {
     padding: 2vw;
     margin: 2vw;
   }
-  #entertainment {
+  #us {
     width: 100vw;
     min-height: 50vh;
     background: url(https://auitent.com/i/darkcircular.png);
@@ -80,11 +80,11 @@ body::-webkit-scrollbar-thumb {
     background-size: cover;
     color: white;
   }
-  #entertainmenttitle {
+  #ustitle {
     transition: 0.3s;
     font-size: 4vw;
   }
-  #entertainment:hover #entertainmenttitle {
+  #us:hover #ustitle {
     letter-spacing: 1vw;
   }
   #brands {
@@ -188,7 +188,7 @@ body::-webkit-scrollbar-thumb {
     padding: 2vw;
     margin: 2vw;
   }
-  #entertainment {
+  #us {
     width: 100vw;
     min-height: 70vh;
     background: url(https://auitent.com/i/squaredarkcircular.png);
@@ -198,11 +198,11 @@ body::-webkit-scrollbar-thumb {
     background-size: cover;
     color: white;
   }
-  #entertainmenttitle {
+  #ustitle {
     transition: 0.3s;
     font-size: 10vw;
   }
-  #entertainment:hover #entertainmenttitle {
+  #us:hover #ustitle {
     letter-spacing: 2vw;
   }
   #brands {
