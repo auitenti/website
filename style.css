@@ -11,6 +11,9 @@ body::-webkit-scrollbar-thumb {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: black;
 }
+p {
+  color: #DDDDDD;
+}
 .fullscreen {
   width: 100vw;
   height: 100vh;
@@ -50,6 +53,9 @@ body::-webkit-scrollbar-thumb {
   .link {
     text-decoration: none;
     color: black;
+  }
+  p {
+    font-size: 6vw;
   }
   h2 {
     font-size: 2vw;
@@ -167,6 +173,9 @@ body::-webkit-scrollbar-thumb {
   }
   .space {
     display: block;
+  }
+  p {
+    font-size: 4vw;
   }
   h2 {
     font-size: 6vw;
