@@ -119,8 +119,8 @@ body::-webkit-scrollbar-thumb {
     letter-spacing: 1vw;
   }
   .note {
-    background: white;
-    color: black;
+    background: black;
+    color: white;
     font-size: 1vw;
     margin: 0;
     padding: 0;
@@ -234,8 +234,8 @@ body::-webkit-scrollbar-thumb {
     letter-spacing: 2vw;
   }
   .note {
-    background: white;
-    color: black;
+    background: black;
+    color: white;
     font-size: 2vw;
     margin: 0;
     padding: 0;
