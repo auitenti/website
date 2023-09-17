@@ -11,8 +11,11 @@ body::-webkit-scrollbar-thumb {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: black;
 }
-p {
+.thinner {
   color: #DDDDDD;
+}
+.thinnerwhite {
+  color: #BBBBBB;
 }
 .fullscreen {
   width: 100vw;
@@ -61,6 +64,7 @@ p {
     width: 70%;
     margin-left: 15%;
   }
+  
   h2 {
     font-size: 2vw;
     transition: 0.3s;
@@ -97,7 +101,7 @@ p {
   #us:hover #ustitle {
     letter-spacing: 1vw;
   }
-  #brands {
+  #contactus {
     width: 100vw;
     min-height: 50vh;
     background: url(https://auitent.com/i/circular.png);
@@ -107,28 +111,11 @@ p {
     background-size: cover;
     color: black;
   }
-  #brandstitle {
+  #contactustitle {
     transition: 0.3s;
     font-size: 4vw;
   }
-  #brands:hover #brandstitle {
-    letter-spacing: 1vw;
-  }
-  #creations {
-    width: 100vw;
-    min-height: 50vh;
-    background: url(https://auitent.com/i/darkcircular.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    color: white;
-  }
-  #creationstitle {
-    transition: 0.3s;
-    font-size: 4vw;
-  }
-  #creations:hover #creationstitle {
+  #contactus:hover #contactustitle {
     letter-spacing: 1vw;
   }
   .note {
@@ -137,6 +124,17 @@ p {
     font-size: 1vw;
     margin: 0;
     padding: 0;
+  }
+  .bar {
+    font-size: 2.5vw;
+    background: black;
+    color: white;
+    border-radius: 100vw;
+    padding: 1.5vw;
+    margin: 1vw;
+  }
+  .barimg {
+    height: 1.9vw;
   }
 }
 @media (orientation: portrait) {
@@ -218,7 +216,7 @@ p {
   #us:hover #ustitle {
     letter-spacing: 2vw;
   }
-  #brands {
+  #contactus {
     width: 100vw;
     min-height: 70vh;
     background: url(https://auitent.com/i/squarecircular.png);
@@ -228,28 +226,11 @@ p {
     background-size: cover;
     color: black;
   }
-  #brandstitle {
+  #contactustitle {
     transition: 0.3s;
     font-size: 10vw;
   }
-  #brands:hover #brandstitle {
-    letter-spacing: 2vw;
-  }
-  #creations {
-    width: 100vw;
-    min-height: 70vh;
-    background: url(https://auitent.com/i/squaredarkcircular.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    color: white;
-  }
-  #creationstitle {
-    transition: 0.3s;
-    font-size: 10vw;
-  }
-  #creations:hover #creationstitle {
+  #contactus:hover #contactustitle {
     letter-spacing: 2vw;
   }
   .note {
@@ -258,5 +239,16 @@ p {
     font-size: 2vw;
     margin: 0;
     padding: 0;
+  }
+  .bar {
+    font-size: 4vw;
+    background: black;
+    color: white;
+    border-radius: 100vw;
+    padding: 1.8vw;
+    margin: 1vw;
+  }
+  .barimg {
+    height: 2.7vw;
   }
 }
