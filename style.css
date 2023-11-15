@@ -1,254 +1,119 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300&display=swap');
+body {
+  margin: 0;
+  font-family: 'DM Sans', sans-serif;
+}
 body::-webkit-scrollbar-track {
 	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	background-color: none;
+	border-radius: 10px;
+	background-color: black;
 }
 body::-webkit-scrollbar {
 	width: 12px;
-	background-color: none;
-}
-body::-webkit-scrollbar-thumb {
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
 	background-color: black;
 }
-.thinner {
-  color: #DDDDDD;
+body::-webkit-scrollbar-thumb {
+	border-radius: 50px;
+	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0, 0.3);
+	background: rgb(231,231,231);
+  background: linear-gradient(57deg, rgba(231,231,231,1) 0%, rgba(218,218,218,1) 72%);
 }
-.thinnerwhite {
-  color: #BBBBBB;
-}
-.fullscreen {
-  width: 100vw;
-  height: 100vh;
-}
-@media (orientation: landscape) {
-  html {
-    scroll-behavior: smooth;
+@keyframes background {
+  0% {
+    background-position: 0% 0%;
   }
-  body {
-    margin: 0;
-    font-family: 'DM Sans', sans-serif;
-    text-align: center;
-    transition: 0.3s;
-    user-drag: none;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    overflow-x: hidden;
+  50% {
+    background-position: 50% -50%;
   }
-  #auitent {
-    width: 100vw;
+  100% {
+    background-position: -50% 50%;
+  }
+}
+@media (min-width: 1024px) {
+  #topbar {
+    width: 100%;
     height: 100vh;
-    background: url(https://auitenti.com/i/circular.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-  }
-  #auitenttitle {
-    padding: 40vh 0 0 0;
-    margin: 0;
-    font-size: 8vw;
-    transition: 0.3s;
-  }
-  .link {
-    text-decoration: none;
-    color: black;
-  }
-  p {
-    font-size: 2vw;
-  }
-  .thinner {
-    width: 70%;
-    margin-left: 15%;
-  }
-  
-  h2 {
-    font-size: 2vw;
-    transition: 0.3s;
-    margin: 0;
-  }
-  h3 {
-    margin: 0;
-  }
-  .item {
-    width: 20vw;
-    height: 20vw;
-    display: inline-grid;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5vw;
-    border-radius: 5vw;
-    padding: 2vw;
-    margin: 2vw;
-  }
-  #us {
-    width: 100vw;
-    min-height: 50vh;
-    background: url(https://auitenti.com/i/darkcircular.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    color: white;
-  }
-  #ustitle {
-    transition: 0.3s;
-    font-size: 4vw;
-  }
-  #us:hover #ustitle {
-    letter-spacing: 1vw;
-  }
-  #contactus {
-    width: 100vw;
-    min-height: 50vh;
-    background: url(https://auitenti.com/i/circular.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
-    color: black;
-  }
-  #contactustitle {
-    transition: 0.3s;
-    font-size: 4vw;
-  }
-  #contactus:hover #contactustitle {
-    letter-spacing: 1vw;
-  }
-  .note {
-    background: black;
-    color: white;
-    font-size: 1vw;
-    margin: 0;
-    padding: 0;
-  }
-  .bar {
-    font-size: 2.5vw;
-    background: black;
-    color: white;
-    border-radius: 100vw;
-    padding: 1.5vw;
-    margin: 1vw;
-  }
-  .barimg {
-    height: 1.9vw;
-  }
-}
-@media (orientation: portrait) {
-  html {
-    scroll-behavior: smooth;
-  }
-  body {
-    margin: 0;
-    font-family: 'DM Sans', sans-serif;
+    background: rgb(231,231,231);
+    background: linear-gradient(57deg, rgba(231, 231, 231, 1) 0%, rgba(0, 0, 0, 1) 67%);
+    background-position: 0% 0%;
     text-align: center;
-    transition: 0.3s;
-    user-drag: none;
-    -webkit-user-drag: none;
-    user-select: none;
-    -moz-user-select: none;
-    -webkit-user-select: none;
-    -ms-user-select: none;
-    overflow-x: hidden;
+    min-height: 100vh;
+    min-height: max(100vh, 1000px);
   }
-  #auitent {
-    width: 100vw;
-    height: 100vh;
-    background: url(https://auitenti.com/i/squarecircular.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+  @media (max-height: 1000px) {
+    #topbar {
+      min-height: 1000px;
+    }
   }
-  #auitenttitle {
-    padding: 30vh 0 0 0;
-    margin: 0;
-    font-size: 24vw;
-    transition: 0.3s;
-  }
-  .link {
-    text-decoration: none;
-    color: black;
-  }
-  .space {
+  .auitentititle {
+    cursor: pointer;
+    position: fixed;
     display: block;
-  }
-  p {
-    font-size: 4vw;
-  }
-  h2 {
-    font-size: 6vw;
-    transition: 0.3s;
-    margin: 0;
-  }
-  h3 {
-    margin: 0;
-  }
-  .item {
-    width: 85vw;
-    height: 50vw;
-    display: inline-grid;
-    justify-content: center;
-    align-items: center;
-    background: #AFA;
-    font-size: 8vw;
-    border-radius: 5vw;
-    padding: 2vw;
-    margin: 2vw;
-  }
-  #us {
-    width: 100vw;
-    min-height: 70vh;
-    background: url(https://auitenti.com/i/squaredarkcircular.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+    width: 100%;
     color: white;
+    padding: 16px;
+    font-size: 48px;
+    text-align: left;
+    transition: 0.2s;
   }
-  #ustitle {
-    transition: 0.3s;
-    font-size: 10vw;
+  .auitentilogo {
+    width: 700px;
+    margin-top: 150px;
+    transition: 0.2s;
   }
-  #us:hover #ustitle {
-    letter-spacing: 2vw;
+  .auitentilogo:hover {
+    padding-top: 50px;
   }
-  #contactus {
-    width: 100vw;
-    min-height: 70vh;
-    background: url(https://auitenti.com/i/squarecircular.png);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    background-size: cover;
+  #portfolio {
+    background: black;
+    text-align: center;
+    padding: 16px 0;
+  }
+  #portfolio:hover .panel {
+    width: 290px;
+  }
+  .panel {
+    width: 280px;
+    height: 600px;
+    border: solid 8px;
+    border-color: white;
+    color: white;
+    padding: 8px;
+    margin: 8px;
+    display: inline-block;
+    font-size: 24px;
+    transition: 0.169s;
+  }
+  .panelheader {
+    margin-top: 280px;
+    display: inline-block;
+    background: white;
     color: black;
+    padding: 16px;
   }
-  #contactustitle {
-    transition: 0.3s;
-    font-size: 10vw;
-  }
-  #contactus:hover #contactustitle {
-    letter-spacing: 2vw;
-  }
-  .note {
+  #description {
     background: black;
+    text-align: center;
+    padding: 64px 16px;
+    width: calc(100% - 32px);
+    font-size: 24px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
     color: white;
-    font-size: 2vw;
-    margin: 0;
-    padding: 0;
   }
-  .bar {
-    font-size: 4vw;
-    background: black;
-    color: white;
-    border-radius: 100vw;
-    padding: 1.8vw;
-    margin: 1vw;
+  #footer {
+    background: white;
+    color: black;
+    font-size: 18px;
+    text-align: center;
+    padding: 8px 0;
   }
-  .barimg {
-    height: 2.7vw;
-  }
+}
+@media (max-width: 1023px) and (min-width: 767px) {
+  
+}
+@media
+  (max-width: 767px) {
+
 }
